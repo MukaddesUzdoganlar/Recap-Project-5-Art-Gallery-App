@@ -1,3 +1,5 @@
-export default function ArtPieces() {
-  return <p>ArtPieces</p>;
+import ArtPieces from "@/components/ArtPieces/ArtPieces";
+
+export default function Page({ artPieces }) {
+  return <ArtPieces artPieces={artPieces} />;
 }
