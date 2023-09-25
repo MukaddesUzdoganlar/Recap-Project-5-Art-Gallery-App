@@ -1,5 +1,6 @@
 import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
 import Image from "next/image";
+import LikeButton from "../LikeButton/LikeButton";
 
 export default function ArtPieces({ pieces }) {
   return (
@@ -15,6 +16,7 @@ export default function ArtPieces({ pieces }) {
           />
         ))}
       </ul>
+      <LikeButton size={30} />
     </section>
   );
 }
