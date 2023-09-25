@@ -14,8 +14,7 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <Layout>
-        <Component {...pageProps} />
-        <p>Art</p>
+        <Component {...pageProps} pieces={data} />
       </Layout>
     </>
   );
