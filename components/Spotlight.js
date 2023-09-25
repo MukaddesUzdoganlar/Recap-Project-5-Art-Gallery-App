@@ -5,8 +5,8 @@ function getRandomElement(array) {
   return array[randomIndex];
 }
 
-export default function Spotlight({ data }) {
-  const randomElement = getRandomElement(data);
+export default function Spotlight({ pieces }) {
+  const randomElement = getRandomElement(pieces);
   const randomImageUrl = randomElement.imageSource;
 
   return (
