@@ -1,8 +1,7 @@
 import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
 import Image from "next/image";
-import LikeButton from "../LikeButton/LikeButton";
 
-export default function ArtPieces({ pieces }) {
+export default function ArtPieces({ pieces, artPiecesInfo, onToggleFavorite }) {
   return (
     <section>
       <h1>Art Pieces</h1>
@@ -14,10 +13,14 @@ export default function ArtPieces({ pieces }) {
             image={piece.imageSource}
             title={piece.name}
             artist={piece.artist}
+            isFavorite={
+              artPiecesInfo?.find((artPiece) => artPiece.slug === piece.slug)
+                ?.isFavorite
+            }
+            onToggleFavorite={onToggleFavorite}
           />
         ))}
       </ul>
-      <LikeButton size={30} />
     </section>
   );
 }
