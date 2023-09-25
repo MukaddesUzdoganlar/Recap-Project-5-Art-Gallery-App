@@ -1,5 +1,5 @@
 import ArtPieces from "@/components/ArtPieces/ArtPieces";
 
-export default function Page({ artPieces }) {
-  return <ArtPieces artPieces={artPieces} />;
+export default function Page({ pieces }) {
+  return <ArtPieces pieces={pieces} />;
 }

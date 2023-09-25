@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-export default function ArtPiecePreview({ img, name, artist }) {
+export default function ArtPiecePreview({ image, title, artist }) {
   return (
     <li>
-      <Image src={img} width={150} height={200} alt={name} />
+      <Image src={image} width={150} height={200} alt={title} />
       <article>
-        <h2>{name}</h2>
+        <h2>{title}</h2>
         <p>Painted by: {artist}</p>
       </article>
     </li>
