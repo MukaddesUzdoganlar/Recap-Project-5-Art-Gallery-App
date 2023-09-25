@@ -1,5 +1,4 @@
 import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
-import Image from "next/image";
 
 export default function ArtPieces({ pieces }) {
   return (
@@ -9,6 +8,7 @@ export default function ArtPieces({ pieces }) {
         {pieces.map((piece) => (
           <ArtPiecePreview
             key={piece.slug}
+            slug={piece.slug}
             image={piece.imageSource}
             title={piece.name}
             artist={piece.artist}
