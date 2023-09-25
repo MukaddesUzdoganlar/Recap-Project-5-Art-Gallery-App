@@ -1,3 +1,5 @@
-export default function Spotlight() {
-  return <p>Hello</p>;
+import Spotlight from "@/components/Spotlight";
+
+export default function Page({ data }) {
+  return <Spotlight data={data} />;
 }
