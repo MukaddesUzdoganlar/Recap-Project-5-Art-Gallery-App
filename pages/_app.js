@@ -17,7 +17,6 @@ export default function App({ Component, pageProps }) {
 
   function handleToggleFavorite(slug) {
     const artPiece = artPiecesInfo.find((piece) => piece.slug === slug);
-    console.log(artPiece);
     if (artPiece) {
       setArtPiecesInfo(
         artPiecesInfo.map((piece) =>
@@ -28,6 +27,15 @@ export default function App({ Component, pageProps }) {
       setArtPiecesInfo([...artPiecesInfo, { slug, isFavorite: true }]);
     }
   }
+
+  //   function handleSubmitComment(slug, text, date){
+  //     const artPiece = artPiecesInfo.find((piece) => piece.slug === slug);
+  //  if (artPiece) {
+  //   setArtPiecesInfo(
+  //     artPiecesInfo.map((piece) =>
+  //     piece.slug === slug ? { slug, comment: [...text, date] } : piece
+  //   )
+  //  }
 
   return (
     <>
